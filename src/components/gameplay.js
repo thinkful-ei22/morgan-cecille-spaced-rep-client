@@ -1,10 +1,14 @@
 import React from 'react';
+import {displayGameplay} from '../actions/game'
 
 export default class Gameplay extends React.Component {
 
   render() {
     return (
       <div>
+        <div>
+          <button type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Back to Dashboard</button>
+        </div>
         <h2>What is this country?</h2>
 
         {/*Image src within this div will take the url from the question database*/}

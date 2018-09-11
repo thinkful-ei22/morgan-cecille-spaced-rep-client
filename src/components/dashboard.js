@@ -1,5 +1,5 @@
 import React from 'react';
-import {getQuestions} from '../actions/game'
+import {getQuestions} from '../actions/game';
 import {connect} from 'react-redux';
 import Gameplay from './gameplay';
 import requiresLogin from './requires-login';
@@ -24,7 +24,7 @@ export class Dashboard extends React.Component {
       } else {
         return (
           <div>
-            <Gameplay />
+            <Gameplay dispatch={this.props.dispatch}/>
           </div>
         )
       }
