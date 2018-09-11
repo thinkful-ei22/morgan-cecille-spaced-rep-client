@@ -21,7 +21,7 @@ export default function reducer(state = initialState, action) {
     })
   } else if(action.type === QUESTIONS_SUCCESS) {
     return Object.assign({}, state, {
-      questions: [...state.questions, ...action.questionsArray]
+      questions: [...action.questionsArray]
     })
   } else if(action.type === QUESTIONS_ERROR) {
     return Object.assign({}, state, {
