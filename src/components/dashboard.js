@@ -1,5 +1,5 @@
 import React from 'react';
-import {displayGameplay} from '../actions/game'
+import {getQuestions} from '../actions/game'
 import {connect} from 'react-redux';
 import Gameplay from './gameplay';
 import requiresLogin from './requires-login';
@@ -13,7 +13,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-username">
                     Username: {this.props.username}
                 </div>
-                <div className="play-button" onClick={() => this.props.dispatch(displayGameplay(true))}>
+                <div className="play-button" onClick={() => this.props.dispatch(getQuestions())}>
                   <button type="button">Play</button>
                 </div>
                 <div className="tutorial-button">

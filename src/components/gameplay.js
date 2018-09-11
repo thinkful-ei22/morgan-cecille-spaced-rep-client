@@ -20,16 +20,3 @@ export default class Gameplay extends React.Component {
     )
   }
 }
-
-//Create a reducer strictly for Gameplay
-//Create an actions file strictly for gameplay
-//Add the reducer to the store
-//Decide the intial state of the game reducer
-//
-// initialState = {
-//   playButton: false,
-//   tutorialButton: false,
-//   currentCountry: '',
-//   currentAnswer: '',
-//   currentCountryUrl: ''
-// }
