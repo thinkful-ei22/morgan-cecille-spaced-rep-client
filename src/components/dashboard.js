@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import Gameplay from './gameplay';
 import requiresLogin from './requires-login';
 
 export class Dashboard extends React.Component {
@@ -35,7 +36,11 @@ export class Dashboard extends React.Component {
             </div>
         );
       } else {
-        return <div>Placeholder div</div>
+        return (
+          <div>
+            <Gameplay />
+          </div>
+        )
       }
 
     }
