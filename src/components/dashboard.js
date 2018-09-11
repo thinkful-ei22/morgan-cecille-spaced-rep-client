@@ -20,6 +20,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+      if(this.state.play === false) {
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -33,6 +34,10 @@ export class Dashboard extends React.Component {
                 </div>
             </div>
         );
+      } else {
+        <div>Placeholder div</div>
+      }
+
     }
 }
 
