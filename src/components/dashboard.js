@@ -35,7 +35,7 @@ export class Dashboard extends React.Component {
             </div>
         );
       } else {
-        <div>Placeholder div</div>
+        return <div>Placeholder div</div>
       }
 
     }
