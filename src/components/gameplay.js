@@ -26,6 +26,10 @@ export class Gameplay extends React.Component {
     }
   }
 
+  nextQuestion(event){
+    this.setState({submittedMessage: null});
+  }
+
   render() {
     if(this.state.submittedMessage){
       return (
@@ -41,7 +45,7 @@ export class Gameplay extends React.Component {
 
           <div>
             <p>{this.state.submittedMessage}</p>
-            <button type='button'>Next</button>
+            <button type='button' onClick={() => this.nextQuestion()}>Next</button>
           </div>
         </div>
 
