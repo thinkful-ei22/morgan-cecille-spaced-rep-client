@@ -7,9 +7,6 @@ import {
 const initialState = {
   playButton: false,
   tutorialButton: false,
-  currentCountry: '',
-  currentAnswer: '',
-  currentCountryUrl: '',
   questions: [],
   error: ''
 }
