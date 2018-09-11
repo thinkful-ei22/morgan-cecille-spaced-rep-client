@@ -10,6 +10,12 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-username">
                     Username: {this.props.username}
                 </div>
+                <div className="play-button">
+                  <button type="button">Play</button>
+                </div>
+                <div className="tutorial-button">
+                  <button type="button">How to Play</button>
+                </div>
             </div>
         );
     }
