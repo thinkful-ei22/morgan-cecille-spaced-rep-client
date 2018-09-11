@@ -1,33 +1,19 @@
 import React from 'react';
+import {displayGameplay} from '../actions/game'
 import {connect} from 'react-redux';
 import Gameplay from './gameplay';
 import requiresLogin from './requires-login';
 
 export class Dashboard extends React.Component {
-    constructor(props) {
-      super(props)
-
-      this.state = {
-        play: false,
-        tutorial: false
-      }
-      this.onPlayClick = this.onPlayClick.bind(this);
-    }
-
-    onPlayClick(bool) {
-      this.setState({
-        play: bool
-      })
-    }
 
     render() {
-      if(this.state.play === false) {
+      if(this.props.playButton === false) {
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
                     Username: {this.props.username}
                 </div>
-                <div className="play-button" onClick={() => this.onPlayClick(true)}>
+                <div className="play-button" onClick={() => this.props.dispatch(displayGameplay(true))}>
                   <button type="button">Play</button>
                 </div>
                 <div className="tutorial-button">
@@ -42,7 +28,6 @@ export class Dashboard extends React.Component {
           </div>
         )
       }
-
     }
 }
 
@@ -51,6 +36,7 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
+        playButton: state.game.playButton
     };
 };
 
