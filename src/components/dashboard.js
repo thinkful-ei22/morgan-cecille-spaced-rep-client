@@ -3,6 +3,21 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
 export class Dashboard extends React.Component {
+    constructor(props) {
+      super(props)
+
+      this.state = {
+        play: false,
+        tutorial: false
+      }
+      this.onPlayClick = this.onPlayClick.bind(this);
+    }
+
+    onPlayClick(bool) {
+      this.setState({
+        play: bool
+      })
+    }
 
     render() {
         return (
@@ -10,7 +25,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-username">
                     Username: {this.props.username}
                 </div>
-                <div className="play-button">
+                <div className="play-button" onClick={() => this.onPlayClick(true)}>
                   <button type="button">Play</button>
                 </div>
                 <div className="tutorial-button">
