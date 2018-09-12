@@ -8,16 +8,11 @@ export const displayGameplay = (bool) => ({
     bool
 });
 
-// export const QUESTIONS_REQUEST = 'QUESTIONS_REQUEST';
-// export const questionsRequest = (bool) => ({
-//     type: QUESTIONS_REQUEST
-//     loading: bool
-// });
 
 export const QUESTIONS_SUCCESS = 'QUESTIONS_SUCCESS';
-export const questionsSuccess = (questionsArray) => ({
+export const questionsSuccess = (url) => ({
     type: QUESTIONS_SUCCESS,
-    questionsArray
+    url
 });
 
 export const QUESTIONS_ERROR = 'QUESTIONS_ERROR';
@@ -37,9 +32,9 @@ export const getQuestions = () => dispatch => {
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(questionsArray => {
+    .then(questionUrl => {
       dispatch(displayGameplay(true));
-      dispatch(questionsSuccess(questionsArray));
+      dispatch(questionsSuccess(questionUrl));
     })
     .catch(err => {
       const {code} = err;
@@ -50,4 +45,41 @@ export const getQuestions = () => dispatch => {
         dispatch(questionsError(message));
     })
   )
+}
+
+
+
+
+export const CHECK_ANSWER_SUCCESS = 'CHECK_ANSWER_SUCCESS';
+export const checkAnswerSuccess = (feedbackObj) => ({
+    type: CHECK_ANSWER_SUCCESS,
+    feedbackObj
+});
+
+export const checkAnswer = userInput => dispatch => {
+  const token = loadAuthToken();
+  return (
+    fetch(`${API_BASE_URL}/api/questions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({answer: userInput})
+    })
+  )
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then(feedbackObj => {
+    console.log(feedbackObj)
+    dispatch(checkAnswerSuccess(feedbackObj));
+  })
+  .catch(err => {
+    const {code} = err;
+    const message =
+      code === 401
+        ? 'Unable to get data'
+        : 'Server error please try again';
+      dispatch(questionsError(message));
+  })
 }
