@@ -1,16 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {displayGameplay} from '../actions/game'
+import {checkAnswer} from '../actions/game';
 
 export class Gameplay extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
-      submittedMessage: null,
-      currentCountry: 'Mexico',
-      currentAnswer: '',
-      currentCountryUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Mexico_in_the_world_%28W3%29.svg',
+      currentAnswer: ''
     }
   }
 
@@ -19,11 +17,10 @@ export class Gameplay extends React.Component {
     const userInput = this.input.value.trim().toLowerCase();
     this.input.value = '';
 
-    if(userInput === this.state.currentCountry.toLowerCase()){
-      this.setState({submittedMessage: `Correct! The answer is ${this.state.currentCountry}!`});
-    } else {
-      this.setState({submittedMessage: `Oops! It's ${this.state.currentCountry}, not ${userInput}`});
-    }
+    this.setState({currentAnswer: userInput}, () => {
+      console.log('USER INPUT',userInput);
+      this.props.dispatch(checkAnswer(userInput));
+    })
   }
 
   nextQuestion(event){
@@ -31,7 +28,11 @@ export class Gameplay extends React.Component {
   }
 
   render() {
-    if(this.state.submittedMessage){
+    if(this.props.feedback){
+      let message = `Oops! The correct answer is ${this.props.feedback.country}, not ${this.state.currentAnswer}`
+      if(this.props.feedback.isCorrect){
+        message = `Correct! It's ${this.props.feedback.country}!`
+      }
       return (
         <div>
           <div>
@@ -40,11 +41,11 @@ export class Gameplay extends React.Component {
           <h2>What is this country?</h2>
 
           <div style={{ position: "relative" }}>
-            <img style={{ height: "200px", width: "200px", }} src={this.state.currentCountryUrl} />
+            <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion} alt='map of world'/>
           </div>
 
           <div>
-            <p>{this.state.submittedMessage}</p>
+            <p>{message}</p>
             <button type='button' onClick={() => this.nextQuestion()}>Next</button>
           </div>
         </div>
@@ -59,9 +60,8 @@ export class Gameplay extends React.Component {
         </div>
         <h2>What is this country?</h2>
 
-        {/*Image src within this div will take the url from the question database*/}
         <div style={{ position: "relative" }}>
-          <img style={{ height: "200px", width: "200px", }} src={this.state.currentCountryUrl} />
+          <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion} alt='map of world'/>
         </div>
         <form onSubmit={e => this.handleSubmit(e)}>
           <label htmlFor="user-input-field">Type your guess here</label>
@@ -75,7 +75,8 @@ export class Gameplay extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    questions: state.game.questions
+    currentQuestion: state.game.currentQuestion,
+    feedback: state.game.feedback
   }
 }
 
