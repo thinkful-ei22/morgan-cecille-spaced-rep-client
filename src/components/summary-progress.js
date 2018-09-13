@@ -20,7 +20,7 @@ export default class SummaryProgress extends React.Component {
     const averageLevel = total/this.props.questionLevels.length;
     return(
       <div>
-        <h3>Average Level: {averageLevel.toFixed(2)}/5</h3>
+        <h3>Average Level: {averageLevel.toFixed(1)}/5</h3>
         <ul>
           {progressList}
         </ul>
