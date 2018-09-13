@@ -43,6 +43,7 @@ export default function reducer(state = initialState, action) {
             error: action.error
         });
     } else if (action.type === QUESTION_LEVEL_SUCCESS){
+      console.log('IN REDUCER:', action.questionLevels);
         return Object.assign({}, state, {
             questionLevels: action.questionLevels
         });
