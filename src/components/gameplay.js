@@ -42,7 +42,7 @@ export class Gameplay extends React.Component {
           <h2>What is this country?</h2>
 
           <div style={{ position: "relative" }}>
-            <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion} alt='map of world'/>
+            <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
           </div>
 
           <div>
@@ -62,7 +62,8 @@ export class Gameplay extends React.Component {
         <h2>What is this country?</h2>
 
         <div style={{ position: "relative" }}>
-          <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion} alt='map of world'/>
+          <p>Level: {this.props.currentQuestion.level}/5</p>
+          <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
         </div>
         <form onSubmit={e => this.handleSubmit(e)}>
           <label htmlFor="user-input-field">Type your guess here</label>
