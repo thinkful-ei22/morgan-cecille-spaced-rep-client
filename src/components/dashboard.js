@@ -1,5 +1,6 @@
 import React from 'react';
 import {getQuestions} from '../actions/game';
+import {} from '../actions/auth';
 import {connect} from 'react-redux';
 import Gameplay from './gameplay';
 import SummaryProgress from './summary-progress';
@@ -22,7 +23,7 @@ export class Dashboard extends React.Component {
                 <div className="tutorial-button">
                   <button type="button">How to Play</button>
                 </div>
-                <SummaryProgress questionLevels={this.props.questionLevels}/>
+                <SummaryProgress questionLevels={this.props.questionLevels} dispatch={this.props.dispatch}/>
             </div>
         );
       } else {
