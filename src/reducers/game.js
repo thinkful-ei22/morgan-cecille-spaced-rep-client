@@ -8,7 +8,7 @@ import {
 const initialState = {
   playButton: false,
   tutorialButton: false,
-  currentQuestion: null,
+  currentQuestion: null,  // {url: '', level: ''}
   feedback: null,
   error: ''
 }
@@ -19,6 +19,7 @@ export default function reducer(state = initialState, action) {
       playButton: action.bool
     })
   } else if(action.type === QUESTIONS_SUCCESS) {
+    console.log('IN REDUCER', action.url);
     return Object.assign({}, state, {
       currentQuestion: action.url
     })

@@ -32,9 +32,9 @@ export const getQuestions = () => dispatch => {
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(questionUrl => {
+    .then(questionRes => {
+      dispatch(questionsSuccess(questionRes));
       dispatch(displayGameplay(true));
-      dispatch(questionsSuccess(questionUrl));
     })
     .catch(err => {
       const {code} = err;

@@ -5,10 +5,14 @@ import {
     AUTH_SUCCESS,
     AUTH_ERROR
 } from '../actions/auth';
+import {
+  QUESTION_LEVEL_SUCCESS
+} from '../actions/users';
 
 const initialState = {
-    authToken: null, // authToken !== null does not mean it has been validated
+    authToken: null,
     currentUser: null,
+    questionLevels: null,
     loading: false,
     error: null
 };
@@ -37,6 +41,10 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             loading: false,
             error: action.error
+        });
+    } else if (action.type === QUESTION_LEVEL_SUCCESS){
+        return Object.assign({}, state, {
+            questionLevels: action.questionLevels
         });
     }
     return state;
