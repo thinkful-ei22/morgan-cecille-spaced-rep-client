@@ -7,8 +7,9 @@ import {
 } from '../actions/auth';
 
 const initialState = {
-    authToken: null, // authToken !== null does not mean it has been validated
+    authToken: null,
     currentUser: null,
+    questionLevels: [{country: 'Canada', level: 1}, {country: 'Mexico', level: 4}, {country: 'America', level: 2}],
     loading: false,
     error: null
 };
