@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {displayGameplay} from '../actions/game'
-import {checkAnswer} from '../actions/game';
+import {displayGameplay, checkAnswer, checkAnswerSuccess, getQuestions} from '../actions/game'
 
 export class Gameplay extends React.Component {
   constructor(props){
@@ -18,13 +17,15 @@ export class Gameplay extends React.Component {
     this.input.value = '';
 
     this.setState({currentAnswer: userInput}, () => {
-      console.log('USER INPUT',userInput);
       this.props.dispatch(checkAnswer(userInput));
     })
   }
 
-  nextQuestion(event){
-    this.setState({submittedMessage: null});
+  nextQuestion(){
+    this.setState({currentAnswer: null}, () => {
+      this.props.dispatch(checkAnswerSuccess(null));
+      this.props.dispatch(getQuestions());
+    });
   }
 
   render() {
