@@ -1,0 +1,42 @@
+.gameplay-container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.name-country {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 50px;
+  margin-top: 5%;
+}
+
+.question-image {
+  height: 500px;
+  width: 500px;
+}
+
+.message {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+  margin: 2%;
+}
+
+.next-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: .5%;
+  padding: .5%;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 7%;
+  width: 15%;
+}
+
+.stats-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: .5%;
+  padding: .5%;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 7%;
+  width: 15%;
+}
