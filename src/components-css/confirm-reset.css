@@ -1,0 +1,40 @@
+.confirm-reset {
+  position: fixed;
+  background-color: rgba(100, 100, 100, 0.7);
+  left: -20px;
+  top: 0px;
+  width: calc(100vw + 20px);
+  height: 100%;
+  z-index: 1; 
+}
+.confirm-reset form {
+  background-color: #E9EEEB;
+  width: 50%;
+  margin: 100px auto 0 auto;
+  padding: 30px 30px 50px 30px;
+  border-radius: 2px;
+  border: 2px solid black;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
+
+.confirm-reset p {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
+
+.confirm-reset .reset-level-warning {
+  font-style: italic;
+  font-size: 18px;
+  color: rgb(150, 0, 0);
+  margin: 20px 0;
+}
+
+.confirm-reset button {
+  padding: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
+.confirm-reset button[type='reset']{
+  margin-right: 20px;
+}
