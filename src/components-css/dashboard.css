@@ -5,6 +5,7 @@
 
 .dashboard-username {
   font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
   position: fixed;
   top: 2%;
 }

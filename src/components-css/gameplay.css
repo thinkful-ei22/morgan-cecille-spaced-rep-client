@@ -35,6 +35,15 @@
 .level {
   font-family: 'Open Sans Condensed', sans-serif;
 }
+.level button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 1px 3px;
+  margin: 10px 0 10px 10px;
+  font-size: 14px;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border-radius: 5px;
+}
 
 .next-button {
   font-family: 'Open Sans Condensed', sans-serif;
