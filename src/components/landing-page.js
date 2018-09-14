@@ -11,7 +11,7 @@ export function LandingPage(props) {
         return <Redirect to="/dashboard" />;
     } else if (props.loading) {
       return (
-        <div>
+        <div className='loading-screen'>
           <p>Loading...</p>
           <img src={spinningEarth} alt='spinning GIF of the globe'/>
         </div>

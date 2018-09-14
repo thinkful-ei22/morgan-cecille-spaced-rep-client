@@ -22,8 +22,7 @@
 }
 
 .question-image {
-  height: 300px;
-  width: 300px;
+  width: 60vw;
 }
 
 .message {
@@ -56,8 +55,8 @@
 }
 
 .user-input-field {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 7px;
+  font-size: 20px;
   margin-right: 1%;
   width: 25%;
 }
