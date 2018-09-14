@@ -1,0 +1,19 @@
+.label {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
+
+input {
+  border: 2px solid black;
+  width: 20%;
+}
+
+.register-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 7%;
+  width: 10%;
+}

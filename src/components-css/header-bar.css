@@ -1,0 +1,15 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.logout-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: fixed;
+  top: 2%;
+  right: 6%;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 6%;
+  width: 10%;
+}

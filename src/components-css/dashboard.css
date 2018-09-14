@@ -1,0 +1,46 @@
+.dashboard {
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard-username {
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: fixed;
+  top: 2%;
+}
+
+.logo {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 120px;
+  position: relative;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.buttons-container {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.play-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: .5%;
+  padding: .5%;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 7%;
+  width: 15%;
+}
+
+.tutorial-button {
+  position: relative;
+  margin: .5%;
+  padding: .5%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 7%;
+  width: 15%;
+}

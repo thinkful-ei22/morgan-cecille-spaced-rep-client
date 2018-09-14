@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import '../components-css/header-bar.css';
 import { authSuccess } from '../actions/auth';
 
 export class HeaderBar extends React.Component {
@@ -13,12 +14,11 @@ export class HeaderBar extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <button onClick={() => this.logOut()}>Log out</button>
+                <button className="logout-button" onClick={() => this.logOut()}>Log out</button>
             );
         }
         return (
             <div className="header-bar">
-                <h1>Where in the World?</h1>
                 {logOutButton}
             </div>
         );

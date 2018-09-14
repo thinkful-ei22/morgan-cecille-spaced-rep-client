@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { displayGameplay, checkAnswer, checkAnswerSuccess, getQuestions } from '../actions/game'
+import '../components-css/gameplay.css';
+import { displayGameplay, checkAnswer, checkAnswerSuccess, getQuestions } from '../actions/game';
 
 export class Gameplay extends React.Component {
   constructor(props){
@@ -34,11 +35,8 @@ export class Gameplay extends React.Component {
         message = `Correct! It's ${this.props.feedback.country}!`
       }
       return (
-        <div>
-          <div>
-            <button type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Back to Dashboard</button>
-          </div>
-          <h2>What is this country?</h2>
+        <div className="gameplay-container">
+          <h2 className="name-country">What is this country?</h2>
 
           <div style={{ position: "relative" }}>
             <p>Level: {this.props.currentQuestion.level}/5</p>
@@ -46,8 +44,9 @@ export class Gameplay extends React.Component {
           </div>
 
           <div>
-            <p>{message}</p>
-            <button type='button' onClick={() => this.nextQuestion()}>Next</button>
+            <p className="message">{message}</p>
+            <button className="next-button" type='button' onClick={() => this.nextQuestion()}>Next Question</button>
+            <button className="stats-button" type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Check my Progress</button>
           </div>
         </div>
 
@@ -63,7 +62,7 @@ export class Gameplay extends React.Component {
 
         <div style={{ position: "relative" }}>
           <p>Level: {this.props.currentQuestion.level}/5</p>
-          <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
+          <img className="question-image" src={this.props.currentQuestion.url} alt='map of world'/>
         </div>
         <form onSubmit={e => this.handleSubmit(e)}>
           <label htmlFor="user-input-field">Type your guess here: </label>

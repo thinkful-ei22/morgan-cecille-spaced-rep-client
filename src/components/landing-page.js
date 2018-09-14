@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
-
+import '../components-css/landing-page.css';
 import spinningEarth from '../images/earth-spinning-gif.gif';
 import LoginForm from './login-form';
 
@@ -20,14 +20,14 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2>Build your world-geography skills!</h2>
-            <img src={spinningEarth} alt='spinning GIF of the globe'/>
+            <h1 className="logo">Atlas</h1>
+            <h3 className="header1">Build your knowledge...</h3>
+            <h3 className="header2">...broaden your world</h3>
+            <div className="earth-image-container">
+              <img className="earth-image" src={spinningEarth} alt='spinning GIF of the globe'/>
+            </div>
             <LoginForm />
-            <Link to="/register">Register</Link>
-            <p>Where in the World is a learning app that teaches users
-              world geography.  It utilizes spaced-reptition learning to
-              optimize recall abilities.
-            </p>
+            <Link className="option" to="/register">Register</Link>
         </div>
     );
 }
