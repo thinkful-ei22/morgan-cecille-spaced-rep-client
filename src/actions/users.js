@@ -50,3 +50,22 @@ export const getQuestionLevels = () => (dispatch) => {
   .then(questionLevels => dispatch(questionLevelSuccess(questionLevels)))
   .catch(err => console.log(err));
 }
+
+
+
+
+
+
+export const resetUserLevels = () => dispatch => {
+  const token = localStorage.getItem('authToken');
+  return fetch(`${API_BASE_URL}/api/users`, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then(questionLevels => dispatch(questionLevelSuccess(questionLevels)))
+  .catch(err => console.log(err));
+}

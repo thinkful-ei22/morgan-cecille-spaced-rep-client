@@ -34,6 +34,7 @@ export const getQuestions = () => dispatch => {
     .then(questionRes => {
       dispatch(getQuestionSuccess(questionRes));
       dispatch(displayGameplay(true));
+      return Promise.resolve();
     })
     .catch(err => {
       const {code} = err;
