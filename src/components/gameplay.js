@@ -18,17 +18,17 @@ export class Gameplay extends React.Component {
   handleSubmit(event){
     event.preventDefault();
     const userInput = this.input.value.trim().toLowerCase();
-
-    this.setState({currentAnswer: userInput}, () => {
-      this.props.dispatch(checkAnswer(userInput));
-    })
+    
+    this.props.dispatch(checkAnswer(userInput))
+    .then( () => this.setState({currentAnswer: userInput}));
   }
 
   nextQuestion(){
-    this.setState({currentAnswer: null}, () => {
+    this.props.dispatch(getQuestions())
+    .then( () => {
       this.props.dispatch(checkAnswerSuccess(null));
-      this.props.dispatch(getQuestions());
-    });
+      this.setState({currentAnswer: null});
+    })
   }
 
   toggleConfirmReset = bool => {
