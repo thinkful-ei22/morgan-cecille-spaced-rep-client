@@ -1,0 +1,33 @@
+.home {
+  height: 100%;
+  width: 100%;
+}
+
+.header1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  margin-right: 100px;
+}
+
+.header2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 130px;
+}
+
+.earth-image-container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.earth-image {
+  margin-top: 5%;
+}
+
+.option {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}

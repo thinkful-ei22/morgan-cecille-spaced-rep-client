@@ -1,0 +1,12 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 120px;
+  position: relative;
+  text-align: center;
+  margin-top: 5%;
+}
