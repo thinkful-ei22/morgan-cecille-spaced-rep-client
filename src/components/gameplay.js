@@ -40,7 +40,7 @@ export class Gameplay extends React.Component {
 
           <div style={{ position: "relative" }}>
             <p>Level: {this.props.currentQuestion.level}/5</p>
-            <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
+            <img src={this.props.currentQuestion.url} alt='map of world'/>
           </div>
 
           <div>
