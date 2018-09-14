@@ -2,9 +2,11 @@ import {SubmissionError} from 'redux-form';
 
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
-import {loadAuthToken} from '../local-storage';
+import { authRequest } from './auth';
+
 
 export const registerUser = user => dispatch => {
+    dispatch(authRequest());
     return fetch(`${API_BASE_URL}/api/users`, {
         method: 'POST',
         headers: {
@@ -36,7 +38,7 @@ export const questionLevelSuccess = questionLevels => ({
 
 
 export const getQuestionLevels = () => (dispatch) => {
-  const token = loadAuthToken();
+  const token = localStorage.getItem('authToken');
   return fetch(`${API_BASE_URL}/api/users`, {
     method: 'GET',
     headers: {

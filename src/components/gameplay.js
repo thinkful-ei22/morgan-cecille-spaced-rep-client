@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {displayGameplay, checkAnswer, checkAnswerSuccess, getQuestions} from '../actions/game'
+import { displayGameplay, checkAnswer, checkAnswerSuccess, getQuestions } from '../actions/game'
 
 export class Gameplay extends React.Component {
   constructor(props){
@@ -14,7 +14,6 @@ export class Gameplay extends React.Component {
   handleSubmit(event){
     event.preventDefault();
     const userInput = this.input.value.trim().toLowerCase();
-    this.input.value = '';
 
     this.setState({currentAnswer: userInput}, () => {
       this.props.dispatch(checkAnswer(userInput));
@@ -42,6 +41,7 @@ export class Gameplay extends React.Component {
           <h2>What is this country?</h2>
 
           <div style={{ position: "relative" }}>
+            <p>Level: {this.props.currentQuestion.level}/5</p>
             <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
           </div>
 
@@ -66,7 +66,7 @@ export class Gameplay extends React.Component {
           <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
         </div>
         <form onSubmit={e => this.handleSubmit(e)}>
-          <label htmlFor="user-input-field">Type your guess here</label>
+          <label htmlFor="user-input-field">Type your guess here: </label>
           <input id="user-input-field" type="text" ref={input => (this.input = input)}/>
           <button type="submit">Submit</button>
         </form>
@@ -83,4 +83,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Gameplay);
-//  https://upload.wikimedia.org/wikipedia/commons/5/5f/Mexico_in_the_world_%28W3%29.svg
