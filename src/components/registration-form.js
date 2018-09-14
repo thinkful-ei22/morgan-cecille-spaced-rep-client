@@ -3,7 +3,9 @@ import {Field, reduxForm, focus} from 'redux-form';
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth';
 import Input from './input';
+import '../components-css/registration-form.css'
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import spinningEarth from '../images/earth-spinning-gif.gif';
 const passwordLength = length({min: 8, max: 72});
 const matchesPassword = matches('password');
 
@@ -18,26 +20,32 @@ export class RegistrationForm extends React.Component {
 
     render() {
         return (
+          <div>
+            <h3 className="header1">Build your knowledge...</h3>
+            <h3 className="header2">...broaden your world</h3>
+            <div className="earth-image-container">
+              <img className="earth-image" src={spinningEarth} alt='spinning GIF of the globe'/>
+            </div>
             <form
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-                <label htmlFor="username">Username</label>
+                <label className="label" htmlFor="username">Username</label>
                 <Field
                     component={Input}
                     type="text"
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
-                <label htmlFor="password">Password</label>
+                <label className="label" htmlFor="password">Password</label>
                 <Field
                     component={Input}
                     type="password"
                     name="password"
                     validate={[required, passwordLength, isTrimmed]}
                 />
-                <label htmlFor="passwordConfirm">Confirm password</label>
+                <label className="label" htmlFor="passwordConfirm">Confirm password</label>
                 <Field
                     component={Input}
                     type="password"
@@ -45,11 +53,13 @@ export class RegistrationForm extends React.Component {
                     validate={[required, nonEmpty, matchesPassword]}
                 />
                 <button
+                    className="register-button"
                     type="submit"
                     disabled={this.props.pristine || this.props.submitting}>
                     Register
                 </button>
             </form>
+          </div>
         );
     }
 }
