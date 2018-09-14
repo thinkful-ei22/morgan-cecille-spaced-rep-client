@@ -12,6 +12,7 @@ export function LandingPage(props) {
     } else if (props.loading) {
       return (
         <div>
+          <p>Loading...</p>
           <img src={spinningEarth} alt='spinning GIF of the globe'/>
         </div>
       )
