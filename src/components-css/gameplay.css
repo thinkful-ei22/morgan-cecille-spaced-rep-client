@@ -4,15 +4,26 @@
   text-align: center;
 }
 
+.form-container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
 .name-country {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 50px;
   margin-top: 5%;
 }
 
+.input-label {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
+
 .question-image {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
 }
 
 .message {
@@ -21,7 +32,28 @@
   margin: 2%;
 }
 
+.level {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .next-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: .5%;
+  padding: .5%;
+  font-size: 20px;
+  border: 2px solid black;
+  height: 7%;
+  width: 15%;
+}
+
+.user-input-field {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 1%;
+  width: 25%;
+}
+
+.submit-button {
   font-family: 'Open Sans Condensed', sans-serif;
   margin: .5%;
   padding: .5%;

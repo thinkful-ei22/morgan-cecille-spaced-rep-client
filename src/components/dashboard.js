@@ -8,15 +8,12 @@ import requiresLogin from './requires-login';
 import '../components-css/dashboard.css';
 
 export class Dashboard extends React.Component {
-    render() {   
+    render() {
       if(this.props.playButton === false) {
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
                     Welcome {this.props.username}!
-                </div>
-                <div className="play-button" onClick={() => this.props.dispatch(getQuestions())}>
-                  <button type="button">Play</button>
                 </div>
                 <h1 className="logo">Atlas</h1>
                 <div className="buttons-container" onClick={() => this.props.dispatch(getQuestions())}>

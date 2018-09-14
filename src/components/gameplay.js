@@ -40,13 +40,13 @@ export class Gameplay extends React.Component {
 
           <div style={{ position: "relative" }}>
             <p>Level: {this.props.currentQuestion.level}/5</p>
-            <img style={{ height: "200px", width: "200px", }} src={this.props.currentQuestion.url} alt='map of world'/>
+            <img className="question-image" src={this.props.currentQuestion.url} alt='map of world'/>
           </div>
 
           <div>
             <p className="message">{message}</p>
             <button className="next-button" type='button' onClick={() => this.nextQuestion()}>Next Question</button>
-            <button className="stats-button" type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Check my Progress</button>
+            <button className="stats-button" type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Check My Progress</button>
           </div>
         </div>
 
@@ -54,20 +54,17 @@ export class Gameplay extends React.Component {
     }
 
     return (
-      <div>
-        <div>
-          <button type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Back to Dashboard</button>
-        </div>
-        <h2>What is this country?</h2>
-
+      <div className="gameplay-container">
+        <h2 className="name-country">What is this country?</h2>
         <div style={{ position: "relative" }}>
-          <p>Level: {this.props.currentQuestion.level}/5</p>
+          <p className="level">Your Proficiency Level on this Question: {this.props.currentQuestion.level}/5</p>
           <img className="question-image" src={this.props.currentQuestion.url} alt='map of world'/>
         </div>
-        <form onSubmit={e => this.handleSubmit(e)}>
-          <label htmlFor="user-input-field">Type your guess here: </label>
-          <input id="user-input-field" type="text" ref={input => (this.input = input)}/>
-          <button type="submit">Submit</button>
+        <form className="form-container" onSubmit={e => this.handleSubmit(e)}>
+          <label className="input-label" htmlFor="user-input-field">Country Name: </label>
+          <input className="user-input-field" type="text" ref={input => (this.input = input)}/>
+          <button className="submit-button" type="submit">Submit</button>
+          <button className="stats-button" type="button" onClick={() => this.props.dispatch(displayGameplay(false))}>Check My Progress</button>
         </form>
       </div>
     )
