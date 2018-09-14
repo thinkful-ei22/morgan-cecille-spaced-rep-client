@@ -9,6 +9,14 @@
   top: 2%;
 }
 
+.logo {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 120px;
+  position: relative;
+  text-align: center;
+  margin-top: 5%;
+}
+
 .buttons-container {
   position: relative;
   text-align: center;

@@ -14,6 +14,7 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
+            <h1 className="logo">Atlas</h1>
             <h3 className="header1">Build your knowledge...</h3>
             <h3 className="header2">...broaden your world</h3>
             <div className="earth-image-container">

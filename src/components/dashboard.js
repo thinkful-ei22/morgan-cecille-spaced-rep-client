@@ -18,6 +18,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-username">
                     Welcome {this.props.username}!
                 </div>
+                <h1 className="logo">Atlas</h1>
                 <div className="buttons-container" onClick={() => this.props.dispatch(getQuestions())}>
                   <button className="play-button" type="button">Play</button>
                   <button className="tutorial-button" type="button">How to Play</button>

@@ -20,7 +20,6 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <h1 className="logo">Atlas</h1>
                 {logOutButton}
             </div>
         );

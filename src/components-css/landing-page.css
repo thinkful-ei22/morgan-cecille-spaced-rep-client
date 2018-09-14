@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+.logo {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 120px;
+  position: relative;
+  text-align: center;
+  margin-top: 5%;
+}
+
 .header1 {
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;

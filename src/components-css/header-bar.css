@@ -3,14 +3,6 @@ body {
   width: 100%;
 }
 
-.logo {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 120px;
-  position: relative;
-  text-align: center;
-  margin-top: 5%;
-}
-
 .logout-button {
   font-family: 'Open Sans Condensed', sans-serif;
   position: fixed;
@@ -18,6 +10,6 @@ body {
   right: 6%;
   font-size: 20px;
   border: 2px solid black;
-  height: 3%;
+  height: 6%;
   width: 10%;
 }
