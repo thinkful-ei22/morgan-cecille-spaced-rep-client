@@ -22,8 +22,7 @@
 }
 
 .question-image {
-  height: 300px;
-  width: 300px;
+  width: 60vw;
 }
 
 .message {
@@ -34,6 +33,15 @@
 
 .level {
   font-family: 'Open Sans Condensed', sans-serif;
+}
+.level button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 1px 3px;
+  margin: 10px 0 10px 10px;
+  font-size: 14px;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border-radius: 5px;
 }
 
 .next-button {
@@ -47,8 +55,8 @@
 }
 
 .user-input-field {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 7px;
+  font-size: 20px;
   margin-right: 1%;
   width: 25%;
 }

@@ -5,14 +5,15 @@
   margin-top: 5%;
 }
 
-.label {
+.login-form .label {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
 }
 
-input {
+.login-form input {
   border: 2px solid black;
   width: 20%;
+  padding: 3px;
 }
 
 .login-button {
@@ -23,4 +24,9 @@ input {
   border: 2px solid black;
   height: 7%;
   width: 10%;
+}
+
+.login-form .form-error {
+  font-style: italic;
+  margin-right: 5px;
 }
