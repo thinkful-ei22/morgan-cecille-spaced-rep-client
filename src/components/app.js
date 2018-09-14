@@ -2,41 +2,56 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 import '../components-css/app.css';
+import jwtDecode from 'jwt-decode';
 import HeaderBar from './header-bar';
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
-import {refreshAuthToken} from '../actions/auth';
+import {/* refreshAuthToken, */ authSuccess} from '../actions/auth';
 
 export class App extends React.Component {
-    componentDidUpdate(prevProps) {
-        if (!prevProps.loggedIn && this.props.loggedIn) {
-            // When we are logged in, refresh the auth token periodically
-            this.startPeriodicRefresh();
-        } else if (prevProps.loggedIn && !this.props.loggedIn) {
-            // Stop refreshing when we log out
-            this.stopPeriodicRefresh();
-        }
+    // componentDidUpdate(prevProps) {
+    //     if (!prevProps.loggedIn && this.props.loggedIn) {
+    //         // When we are logged in, refresh the auth token periodically
+    //         this.startPeriodicRefresh();
+    //     } else if (prevProps.loggedIn && !this.props.loggedIn) {
+    //         // Stop refreshing when we log out
+    //         this.stopPeriodicRefresh();
+    //     }
+    // }
+
+    componentWillMount(){
+      const token = localStorage.getItem('authToken');
+      if(token){
+        const decodedToken = jwtDecode(token);
+        this.props.dispatch(authSuccess(decodedToken.user));
+      }
+
     }
 
     componentWillUnmount() {
-        this.stopPeriodicRefresh();
+      const token = localStorage.getItem('authToken');
+      localStorage.clear();
+      if(token){
+        localStorage.setItem('authToken', token);
+      }
+      // this.stopPeriodicRefresh();
     }
 
-    startPeriodicRefresh() {
-        this.refreshInterval = setInterval(
-            () => this.props.dispatch(refreshAuthToken()),
-            60 * 60 * 1000 // One hour
-        );
-    }
+    // startPeriodicRefresh() {
+    //     this.refreshInterval = setInterval(
+    //         () => this.props.dispatch(refreshAuthToken()),
+    //         60 * 60 * 1000 // One hour
+    //     );
+    // }
 
-    stopPeriodicRefresh() {
-        if (!this.refreshInterval) {
-            return;
-        }
+    // stopPeriodicRefresh() {
+    //     if (!this.refreshInterval) {
+    //         return;
+    //     }
 
-        clearInterval(this.refreshInterval);
-    }
+    //     clearInterval(this.refreshInterval);
+    // }
 
     render() {
         return (
@@ -51,7 +66,6 @@ export class App extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    hasAuthToken: state.auth.authToken !== null,
     loggedIn: state.auth.currentUser !== null
 });
 

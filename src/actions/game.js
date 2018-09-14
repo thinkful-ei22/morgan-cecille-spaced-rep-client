@@ -1,5 +1,4 @@
 import {API_BASE_URL} from '../config';
-import {loadAuthToken} from '../local-storage';
 import {normalizeResponseErrors} from './utils';
 
 export const DISPLAY_GAMEPLAY = 'DISPLAY_GAMEPLAY';
@@ -9,20 +8,20 @@ export const displayGameplay = (bool) => ({
 });
 
 
-export const QUESTIONS_SUCCESS = 'QUESTIONS_SUCCESS';
-export const questionsSuccess = (url) => ({
-    type: QUESTIONS_SUCCESS,
-    url
+export const GET_QUESTION_SUCCESS = 'GET_QUESTION_SUCCESS';
+export const getQuestionSuccess = (question) => ({
+    type: GET_QUESTION_SUCCESS,
+    question
 });
 
-export const QUESTIONS_ERROR = 'QUESTIONS_ERROR';
-export const questionsError = error => ({
-    type: QUESTIONS_ERROR,
+export const GET_QUESTION_ERROR = 'GET_QUESTION_ERROR';
+export const getQuestionError = error => ({
+    type: GET_QUESTION_ERROR,
     error
 });
 
 export const getQuestions = () => dispatch => {
-  const token = loadAuthToken();
+  const token = localStorage.getItem('authToken');
   return (
     fetch(`${API_BASE_URL}/api/questions`, {
       method: 'GET',
@@ -33,7 +32,7 @@ export const getQuestions = () => dispatch => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(questionRes => {
-      dispatch(questionsSuccess(questionRes));
+      dispatch(getQuestionSuccess(questionRes));
       dispatch(displayGameplay(true));
     })
     .catch(err => {
@@ -42,7 +41,7 @@ export const getQuestions = () => dispatch => {
         code === 401
           ? 'Unable to get data'
           : 'Server error please try again';
-        dispatch(questionsError(message));
+        dispatch(getQuestionError(message));
     })
   )
 }
@@ -57,7 +56,7 @@ export const checkAnswerSuccess = (feedbackObj) => ({
 });
 
 export const checkAnswer = userInput => dispatch => {
-  const token = loadAuthToken();
+  const token = localStorage.getItem('authToken');
   return (
     fetch(`${API_BASE_URL}/api/questions`, {
       method: 'POST',
@@ -71,7 +70,6 @@ export const checkAnswer = userInput => dispatch => {
   .then(res => normalizeResponseErrors(res))
   .then(res => res.json())
   .then(feedbackObj => {
-    console.log(feedbackObj)
     dispatch(checkAnswerSuccess(feedbackObj));
   })
   .catch(err => {
@@ -80,6 +78,6 @@ export const checkAnswer = userInput => dispatch => {
       code === 401
         ? 'Unable to get data'
         : 'Server error please try again';
-      dispatch(questionsError(message));
+      dispatch(getQuestionError(message));
   })
 }
