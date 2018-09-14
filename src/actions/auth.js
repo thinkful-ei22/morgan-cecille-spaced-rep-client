@@ -3,18 +3,7 @@ import {SubmissionError} from 'redux-form';
 
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
-import {saveAuthToken, clearAuthToken, /* loadAuthToken */} from '../local-storage';
 
-export const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
-export const setAuthToken = authToken => ({
-    type: SET_AUTH_TOKEN,
-    authToken
-});
-
-export const CLEAR_AUTH = 'CLEAR_AUTH';
-export const clearAuth = () => ({
-    type: CLEAR_AUTH
-});
 
 export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const authRequest = () => ({
@@ -33,14 +22,6 @@ export const authError = error => ({
     error
 });
 
-// Stores the auth token in state and localStorage, and decodes and stores
-// the user data stored in the token
-export const storeAuthInfo = (authToken, dispatch) => {
-    const decodedToken = jwtDecode(authToken);
-    dispatch(setAuthToken(authToken));
-    saveAuthToken(authToken);
-    dispatch(authSuccess(decodedToken.user));
-};
 
 export const login = (username, password) => dispatch => {
     dispatch(authRequest()); //set loading to true?
@@ -59,7 +40,11 @@ export const login = (username, password) => dispatch => {
             // errors which follow a consistent format
             .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
-            .then(({authToken}) => storeAuthInfo(authToken, dispatch))
+            .then(({authToken}) => {
+              localStorage.setItem('authToken', authToken);
+              const decodedToken = jwtDecode(authToken);
+              dispatch(authSuccess(decodedToken.user));
+            })
             .catch(err => {
                 const {code} = err;
                 const message =
@@ -82,25 +67,25 @@ export const login = (username, password) => dispatch => {
 
 
 
-export const refreshAuthToken = () => (dispatch, getState) => {
-    dispatch(authRequest());
-    const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/auth/refresh`, {
-        method: 'POST',
-        headers: {
-            // Provide our existing token as credentials to get a new one
-            Authorization: `Bearer ${authToken}`
-        }
-    })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({authToken}) => storeAuthInfo(authToken, dispatch))
-        .catch(err => {
-            // We couldn't get a refresh token because our current credentials
-            // are invalid or expired, or something else went wrong, so clear
-            // them and sign us out
-            dispatch(authError(err));
-            dispatch(clearAuth());
-            clearAuthToken(authToken);
-        });
-};
+// export const refreshAuthToken = () => (dispatch, getState) => {
+//     dispatch(authRequest());
+//     const authToken = getState().auth.authToken;
+//     return fetch(`${API_BASE_URL}/auth/refresh`, {
+//         method: 'POST',
+//         headers: {
+//             // Provide our existing token as credentials to get a new one
+//             Authorization: `Bearer ${authToken}`
+//         }
+//     })
+//         .then(res => normalizeResponseErrors(res))
+//         .then(res => res.json())
+//         .then(({authToken}) => storeAuthInfo(authToken, dispatch))
+//         .catch(err => {
+//             // We couldn't get a refresh token because our current credentials
+//             // are invalid or expired, or something else went wrong, so clear
+//             // them and sign us out
+//             dispatch(authError(err));
+//             dispatch(clearAuth());
+//             clearAuthToken(authToken);
+//         });
+// };
