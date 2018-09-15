@@ -11,13 +11,13 @@
 }
 
 .name-country {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 50px;
   margin-top: 5%;
 }
 
 .input-label {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
 }
 
@@ -26,16 +26,16 @@
 }
 
 .message {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 25px;
   margin: 2%;
 }
 
 .level {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
 }
 .level button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   padding: 1px 3px;
   margin: 10px 0 10px 10px;
   font-size: 14px;
@@ -45,7 +45,7 @@
 }
 
 .next-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
@@ -62,7 +62,7 @@
 }
 
 .submit-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
@@ -72,7 +72,7 @@
 }
 
 .stats-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   margin: .5%;
   padding: .5%;
   font-size: 20px;

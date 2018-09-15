@@ -14,12 +14,12 @@
   padding: 30px 30px 50px 30px;
   border-radius: 2px;
   border: 2px solid black;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
 }
 
 .confirm-reset p {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
 }
 
@@ -32,7 +32,7 @@
 
 .confirm-reset button {
   padding: 10px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
   border: 2px solid black;
 }

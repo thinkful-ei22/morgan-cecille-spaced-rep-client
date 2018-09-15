@@ -4,14 +4,14 @@
 }
 
 .dashboard-username {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
   position: fixed;
   top: 2%;
 }
 
 .logo {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 120px;
   position: relative;
   text-align: center;
@@ -26,7 +26,7 @@
 }
 
 .play-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
@@ -39,7 +39,7 @@
   position: relative;
   margin: .5%;
   padding: .5%;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
   border: 2px solid black;
   height: 7%;
