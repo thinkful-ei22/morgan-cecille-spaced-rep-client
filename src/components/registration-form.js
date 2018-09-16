@@ -5,7 +5,6 @@ import {login} from '../actions/auth';
 import Input from './input';
 import '../components-css/registration-form.css'
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
-import spinningEarth from '../images/earth-spinning-gif.gif';
 const passwordLength = length({min: 8, max: 72});
 const matchesPassword = matches('password');
 
@@ -24,9 +23,6 @@ export class RegistrationForm extends React.Component {
             <h1 className="logo">Atlas</h1>
             <h3 className="header1">Build your knowledge...</h3>
             <h3 className="header2">...broaden your world</h3>
-            <div className="earth-image-container">
-              <img className="earth-image" src={spinningEarth} alt='spinning GIF of the globe'/>
-            </div>
             <form
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>

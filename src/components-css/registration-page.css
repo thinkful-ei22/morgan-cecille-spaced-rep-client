@@ -5,6 +5,9 @@
 }
 
 .option {
-  font-family: 'EB Garamond', serif;
-  font-size: 20px;
+  font-family: 'Abel', sans-serif;
+  font-size: 15px;
+  position: fixed;
+  right: 23%;
+  bottom: 15%;
 }
