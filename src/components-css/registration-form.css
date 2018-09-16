@@ -3,6 +3,16 @@
   font-size: 20px;
 }
 
+.side-photo-registration-form {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  background-image: url("https://s15.postimg.cc/rm98sqk23/Bryce2.jpg");
+  background-size: cover;
+  margin-top: -76px;
+  margin-left: -20px;
+}
+
 input {
   border: 2px solid black;
   width: 20%;
@@ -10,10 +20,12 @@ input {
 
 .register-button {
   font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   margin-top: 2%;
   margin-bottom: 1%;
-  font-size: 20px;
-  border: 2px solid black;
+  font-size: 15px;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
   height: 7%;
-  width: 10%;
+  width: 15%;
 }
