@@ -5,11 +5,13 @@ body {
 
 .logout-button {
   font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   position: fixed;
   top: 2%;
   right: 6%;
   font-size: 20px;
-  border: 2px solid black;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
   height: 6%;
   width: 10%;
 }

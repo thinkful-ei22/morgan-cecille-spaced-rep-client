@@ -19,7 +19,7 @@ export function LandingPage(props) {
     return (
         <div className="home">
             <div className="side-photo"></div>
-            <h1 className="logo">Atlas</h1>
+            <h1 className="logo-landing">Atlas</h1>
             <div className="description-container">
               <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.<br/><br/>Ready to learn where Zimbabwe is?</p>
             </div>

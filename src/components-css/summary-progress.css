@@ -3,6 +3,9 @@
   width: 100%;
   text-align: center;
   margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  border: 2px solid #E85A4F;
 }
 
 .stats {
@@ -23,6 +26,7 @@
 
 .average {
   font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 2%;
@@ -30,6 +34,26 @@
 
 .stats-li {
   font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   margin: 1%;
   font-size: 20px;
+}
+
+.border {
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  border: 2px solid #E85A4F;
+  width: 300px;
+  background-color: "#ffe52c";
+  display: inline-block;
+  margin-top: 1%;
+}
+
+.bar {
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  height: 24px;
+  width: 10%;
+  background-color: #8E8D8A;
+  text-align: right;
 }

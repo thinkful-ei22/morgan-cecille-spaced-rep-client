@@ -18,6 +18,15 @@ input {
   width: 20%;
 }
 
+.logo-register {
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  font-size: 45px;
+  text-align: right;
+  margin-top: 5%;
+  margin-right: 20%;
+}
+
 .register-button {
   font-family: 'Abel', sans-serif;
   color: #E85A4F;

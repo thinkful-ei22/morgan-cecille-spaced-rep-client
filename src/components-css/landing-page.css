@@ -13,13 +13,13 @@
   margin-left: -20px;
 }
 
-.logo {
+.logo-landing {
   font-family: 'Abel', sans-serif;
   color: #E85A4F;
-  font-size: 20px;
+  font-size: 45px;
   text-align: right;
   margin-top: 5%;
-  margin-right: 15%;
+  margin-right: 20%;
 }
 
 .description-container {
