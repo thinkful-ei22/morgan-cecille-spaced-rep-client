@@ -17,7 +17,12 @@ export default class SummaryProgress extends React.Component {
         total = total + country.level
         return (
           <li className="stats-li" key={country.country}>
-            {country.country}: Level {country.level}/5
+              {country.country}
+            <div className="progress-bar-container">
+              <div className="border">
+                <div className="bar" style={{ width: country.level*20  }}>{country.level*5 + "%"}</div>
+              </div>
+            </div>
           </li>
         )
       })
@@ -25,10 +30,15 @@ export default class SummaryProgress extends React.Component {
 
     return(
       <div className="summary-progress-container">
+          <br/>
+          <br/>
           <h3 className="average">Average Proficiency Level: {averageLevel.toFixed(1)}/5</h3>
+          <br/>
           <ul className="stats">
             {progressList}
           </ul>
+          <br/>
+          <br/>
       </div>
     )
   }

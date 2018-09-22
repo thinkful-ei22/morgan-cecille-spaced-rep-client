@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 import '../components-css/landing-page.css';
-import spinningEarth from '../images/earth-spinning-gif.gif';
 import LoginForm from './login-form';
 
 export function LandingPage(props) {
@@ -13,18 +12,16 @@ export function LandingPage(props) {
       return (
         <div className='loading-screen'>
           <p>Loading...</p>
-          <img src={spinningEarth} alt='spinning GIF of the globe'/>
         </div>
       )
     }
 
     return (
         <div className="home">
-            <h1 className="logo">Atlas</h1>
-            <h3 className="header1">Build your knowledge...</h3>
-            <h3 className="header2">...broaden your world</h3>
-            <div className="earth-image-container">
-              <img className="earth-image" src={spinningEarth} alt='spinning GIF of the globe'/>
+            <div className="side-photo"></div>
+            <h1 className="logo-landing">Atlas</h1>
+            <div className="description-container">
+              <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.<br/><br/>Ready to learn where Zimbabwe is?</p>
             </div>
             <LoginForm />
             <Link className="option" to="/register">Register</Link>

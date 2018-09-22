@@ -5,7 +5,6 @@ import {login} from '../actions/auth';
 import Input from './input';
 import '../components-css/registration-form.css'
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
-import spinningEarth from '../images/earth-spinning-gif.gif';
 const passwordLength = length({min: 8, max: 72});
 const matchesPassword = matches('password');
 
@@ -21,11 +20,10 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
           <div>
-            <h1 className="logo">Atlas</h1>
-            <h3 className="header1">Build your knowledge...</h3>
-            <h3 className="header2">...broaden your world</h3>
-            <div className="earth-image-container">
-              <img className="earth-image" src={spinningEarth} alt='spinning GIF of the globe'/>
+            <div className="side-photo-registration-form"></div>
+            <h1 className="logo-register">Atlas</h1>
+            <div className="description-container">
+              <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.<br/><br/>Ready to learn where Zimbabwe is?</p>
             </div>
             <form
                 className="login-form"

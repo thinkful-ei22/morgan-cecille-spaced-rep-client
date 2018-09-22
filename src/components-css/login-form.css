@@ -1,27 +1,34 @@
 .login-form {
+  position: fixed;
   height: 100%;
-  width: 100%;
-  text-align: center;
-  margin-top: 5%;
+  width: 50%;
+  top: 50%;
+  right: 0%;
 }
 
 .login-form .label {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 20px;
+  font-family: 'Abel', sans-serif;
+  font-size: 15px;
+  color: #E85A4F;
 }
 
 .login-form input {
-  border: 2px solid black;
-  width: 20%;
-  padding: 3px;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
+  width: 35%;
+  padding: 5px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .login-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   margin-top: 2%;
   margin-bottom: 1%;
-  font-size: 20px;
-  border: 2px solid black;
+  font-size: 15px;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
   height: 7%;
   width: 10%;
 }

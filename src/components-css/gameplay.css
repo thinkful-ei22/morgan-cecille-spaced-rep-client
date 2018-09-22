@@ -11,13 +11,15 @@
 }
 
 .name-country {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   font-size: 50px;
   margin-top: 5%;
 }
 
 .input-label {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   font-size: 20px;
 }
 
@@ -26,16 +28,19 @@
 }
 
 .message {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   font-size: 25px;
   margin: 2%;
 }
 
 .level {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
 }
 .level button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   padding: 1px 3px;
   margin: 10px 0 10px 10px;
   font-size: 14px;
@@ -45,11 +50,13 @@
 }
 
 .next-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
-  border: 2px solid black;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
   height: 7%;
   width: 15%;
 }
@@ -59,24 +66,30 @@
   font-size: 20px;
   margin-right: 1%;
   width: 25%;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
 }
 
 .submit-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
-  border: 2px solid black;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
   height: 7%;
   width: 15%;
 }
 
 .stats-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
-  border: 2px solid black;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
   height: 7%;
   width: 15%;
 }

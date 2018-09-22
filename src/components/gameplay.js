@@ -18,7 +18,7 @@ export class Gameplay extends React.Component {
   handleSubmit(event){
     event.preventDefault();
     const userInput = this.input.value.trim().toLowerCase();
-    
+
     this.props.dispatch(checkAnswer(userInput))
     .then( () => this.setState({currentAnswer: userInput}));
   }
@@ -55,7 +55,7 @@ export class Gameplay extends React.Component {
           <h2 className="name-country">What is this country?</h2>
 
           <div style={{ position: "relative" }}>
-            <p className="level">Your Proficiency Level on this Question: {newLevel}/5 
+            <p className="level">Your Proficiency Level on this Question: {newLevel}/5
               <button type='button' onClick={() => this.toggleConfirmReset(true)}>Reset All Levels</button>
             </p>
             <img className="question-image" src={this.props.currentQuestion.url} alt='map of world'/>
@@ -76,7 +76,7 @@ export class Gameplay extends React.Component {
         {confirmResetComponent}
         <h2 className="name-country">What is this country?</h2>
         <div style={{ position: "relative" }}>
-          <p className="level">Your Proficiency Level on this Question: {this.props.currentQuestion.level}/5 
+          <p className="level">Your Proficiency Level on this Question: {this.props.currentQuestion.level}/5
             <button type='button' onClick={() => this.toggleConfirmReset(true)}>Reset All Levels</button>
           </p>
           <img className="question-image" src={this.props.currentQuestion.url} alt='map of world'/>

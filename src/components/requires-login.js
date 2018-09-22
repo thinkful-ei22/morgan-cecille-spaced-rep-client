@@ -2,8 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 
-import spinningEarth from '../images/earth-spinning-gif.gif';
-
 export default () => Component => {
     function RequiresLogin(props) {
         const {authenticating, loggedIn, error, ...passThroughProps} = props;
@@ -11,7 +9,6 @@ export default () => Component => {
             return (
               <div>
                 <p>Logging in...</p>
-                <img src={spinningEarth} alt='spinning GIF of the globe'/>
               </div>
             );
         } else if (!loggedIn || error) {

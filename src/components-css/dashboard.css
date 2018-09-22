@@ -4,18 +4,27 @@
 }
 
 .dashboard-username {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
   font-size: 20px;
   position: fixed;
   top: 2%;
+  left: 5%;
 }
 
-.logo {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 120px;
+.logo-container {
+  height: 100%;
+  width: 100%;
+}
+
+.logo-dash {
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  font-size: 45px;
   position: relative;
   text-align: center;
   margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 .buttons-container {
@@ -26,22 +35,27 @@
 }
 
 .play-button {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  background-color: transparent;
   margin: .5%;
   padding: .5%;
   font-size: 20px;
-  border: 2px solid black;
+  border: 2px solid #E85A4F;
   height: 7%;
   width: 15%;
 }
 
 .tutorial-button {
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  background-color: transparent;
   position: relative;
   margin: .5%;
   padding: .5%;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 20px;
-  border: 2px solid black;
+  border: 2px solid #E85A4F;
   height: 7%;
   width: 15%;
 }
