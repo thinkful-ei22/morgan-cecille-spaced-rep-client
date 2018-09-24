@@ -1,10 +1,9 @@
 .summary-progress-container {
   height: 100%;
   width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 20px auto;
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 5%;
   border: 2px solid #E85A4F;
 }
 
@@ -30,6 +29,7 @@
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 2%;
+  padding: 0 10px;
 }
 
 .stats-li {
@@ -44,16 +44,23 @@
   color: #E85A4F;
   border: 2px solid #E85A4F;
   width: 300px;
-  background-color: "#ffe52c";
+  /* background-color: #ffe52c; */
   display: inline-block;
   margin-top: 1%;
 }
 
 .bar {
   font-family: 'Abel', sans-serif;
-  color: #E85A4F;
+  color: white;
+  text-shadow: 2px 0 #E85A4F;
   height: 24px;
   width: 10%;
   background-color: #8E8D8A;
   text-align: right;
+}
+
+@media only screen and (max-width: 400px){
+  .border {
+    width: 90%;
+  }
 }
