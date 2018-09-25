@@ -5,7 +5,7 @@
 
 .side-photo-registration-form {
   position: fixed;
-  height: 100%;
+  height: 105%;
   width: 50%;
   background-image: url("https://s15.postimg.cc/rm98sqk23/Bryce2.jpg");
   background-size: cover;
@@ -49,7 +49,7 @@ input {
 
   .side-photo-registration-form {
     width: 100%;
-    height: 100%;
+    height: 110%;
   }
 
   .logo-register {

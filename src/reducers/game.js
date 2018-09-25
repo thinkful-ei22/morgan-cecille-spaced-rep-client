@@ -1,5 +1,6 @@
 import {
     DISPLAY_GAMEPLAY,
+    DISPLAY_TUTORIAL,
     GET_QUESTION_SUCCESS,
     GET_QUESTION_ERROR,
     CHECK_ANSWER_SUCCESS
@@ -19,6 +20,10 @@ export default function reducer(state = initialState, action) {
       playButton: action.bool
     })
 
+  } else if(action.type === DISPLAY_TUTORIAL) {
+    return Object.assign({}, state, {
+      tutorialButton: action.bool
+    })
   } else if(action.type === GET_QUESTION_SUCCESS) {
     return Object.assign({}, state, {
       currentQuestion: action.question,
@@ -34,7 +39,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       feedback: action.feedbackObj
     })
-    
+
   } else {
     return state;
   }

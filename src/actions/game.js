@@ -7,6 +7,11 @@ export const displayGameplay = (bool) => ({
     bool
 });
 
+export const DISPLAY_TUTORIAL = 'DISPLAY_TUTORIAL';
+export const displayTutorial = (bool) => ({
+    type: DISPLAY_TUTORIAL,
+    bool
+});
 
 export const GET_QUESTION_SUCCESS = 'GET_QUESTION_SUCCESS';
 export const getQuestionSuccess = (question) => ({

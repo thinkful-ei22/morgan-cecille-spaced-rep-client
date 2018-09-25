@@ -11,7 +11,8 @@ body {
   right: 6%;
   font-size: 20px;
   border: 2px solid #E85A4F;
-  background-color: transparent;
+  background-color: #EAE7DC;
   height: 40px;
   width: 80px;
+  z-index: 2;
 }
