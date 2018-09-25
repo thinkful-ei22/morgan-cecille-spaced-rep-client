@@ -10,7 +10,7 @@ import '../components-css/dashboard.css';
 
 export class Dashboard extends React.Component {
     render() {
-      if(this.props.playButton === false || this.props.tutorialButton === false) {
+      if(this.props.playButton === false && this.props.tutorialButton === false) {
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -19,8 +19,8 @@ export class Dashboard extends React.Component {
                 <div className="logo-container">
                   <h1 className="logo-dash">Atlas</h1>
                 </div>
-                <div className="buttons-container" onClick={() => this.props.dispatch(getQuestions())}>
-                  <button className="play-button" type="button">Play</button>
+                <div className="buttons-container">
+                  <button className="play-button" type="button" onClick={() => this.props.dispatch(getQuestions())}>Play</button>
                   <button className="tutorial-button" type="button" onClick={() => this.props.dispatch(displayTutorial(true))}>How to Play</button>
                 </div>
                 <SummaryProgress questionLevels={this.props.questionLevels} dispatch={this.props.dispatch}/>
@@ -32,7 +32,7 @@ export class Dashboard extends React.Component {
             <Tutorial dispatch={this.props.dispatch}/>
           </div>
         )
-      } else {
+      } else if(this.props.playButton === true) {
         return (
           <div>
             <Gameplay dispatch={this.props.dispatch}/>
