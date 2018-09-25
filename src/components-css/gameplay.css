@@ -53,13 +53,13 @@
 .next-button {
   font-family: 'Abel', sans-serif;
   color: #E85A4F;
-  margin: .5%;
+  margin: 15px 20px 15px 0;
   padding: .5%;
   font-size: 20px;
   border: 2px solid #E85A4F;
   background-color: transparent;
   height: 7%;
-  width: 15%;
+  width: 180px;
 }
 
 .user-input-field {
@@ -101,11 +101,16 @@
   .user-input-field {
     display: block;
     margin: 0 auto;
+    text-align: center;
   }
   
   .submit-button, .stats-button {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  .next-button {
+
   }
 }
