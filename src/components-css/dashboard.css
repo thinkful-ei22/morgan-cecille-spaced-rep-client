@@ -23,7 +23,7 @@
   font-size: 45px;
   position: relative;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 60px;
   margin-bottom: 3%;
 }
 
@@ -43,7 +43,7 @@
   font-size: 20px;
   border: 2px solid #E85A4F;
   height: 7%;
-  width: 15%;
+  width: 150px;
 }
 
 .tutorial-button {
@@ -57,5 +57,17 @@
   font-size: 20px;
   border: 2px solid #E85A4F;
   height: 7%;
-  width: 15%;
+  width: 150px;
+}
+
+
+@media only screen and (max-width: 428px){
+  .tutorial-button {
+    width: 35vw;
+  }
+
+  .play-button {
+    width: 35vw;
+    margin-right: 20px;
+  }
 }

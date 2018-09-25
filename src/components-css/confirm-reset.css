@@ -1,15 +1,16 @@
 .confirm-reset {
   position: fixed;
   background-color: rgba(100, 100, 100, 0.7);
-  left: -20px;
-  top: 0px;
-  width: calc(100vw + 20px);
+  left: 0;
+  top: 0;
+  width: 100vw;
   height: 100%;
   z-index: 1;
 }
 .confirm-reset form {
+  box-sizing: border-box;
   background-color: #E9EEEB;
-  width: 50%;
+  width: 90vw;
   margin: 100px auto 0 auto;
   padding: 30px 30px 50px 30px;
   border-radius: 2px;
@@ -38,4 +39,12 @@
 }
 .confirm-reset button[type='reset']{
   margin-right: 30px;
+}
+
+@media only screen and (max-width: 560px){
+  .confirm-reset button[type='reset'], .confirm-reset button[type='submit'] {
+    display: block;
+    width: 220px;
+    margin: 20px auto 0 auto;
+  }
 }

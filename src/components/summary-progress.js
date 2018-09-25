@@ -20,7 +20,7 @@ export default class SummaryProgress extends React.Component {
               {country.country}
             <div className="progress-bar-container">
               <div className="border">
-                <div className="bar" style={{ width: country.level*20  }}>{country.level*5 + "%"}</div>
+                <div className="bar" style={{ width: `${country.level*20}%`  }}>{country.level*20 + "%"}</div>
               </div>
             </div>
           </li>
