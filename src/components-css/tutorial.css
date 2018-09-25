@@ -1,0 +1,31 @@
+.tutorial-container {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #E85A4F;
+}
+
+.tutorial-text {
+  font-family: 'Abel', sans-serif;
+}
+
+ul {
+  font-family: 'Abel', sans-serif;
+}
+
+li {
+  font-family: 'Abel', sans-serif;
+}
+
+.tutorial-button-container {
+  width: 100%;
+  text-align: center;
+}
+
+.tutorial-button {
+  font-family: 'Abel', sans-serif;
+  color: #E85A4F;
+  font-size: 20px;
+  border: 2px solid #E85A4F;
+  background-color: transparent;
+}
