@@ -48,7 +48,7 @@ Demo password:  _password_
 
 ###### Mobile Views
 
-![Screenshot of Mobile Landing Page](https://github.com/thinkful-ei22/morgan-cecille-spaced-rep-client/blob/master/src/images/screenshot-mobile-landing.png) ![Screenshot of Mobile Gameplay](https://github.com/thinkful-ei22/morgan-cecille-spaced-rep-client/blob/master/src/images/screenshot-mobile-gameplay.png)
+![Screenshot of Mobile Landing Page](https://github.com/thinkful-ei22/morgan-cecille-spaced-rep-client/blob/master/src/images/screenshot-mobile-landing.png)     ![Screenshot of Mobile Gameplay](https://github.com/thinkful-ei22/morgan-cecille-spaced-rep-client/blob/master/src/images/screenshot-mobile-gameplay.png)
 
 
 
