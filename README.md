@@ -24,33 +24,11 @@ Demo password:  _password_
 
 ### Screenshots
 
-###### Landing Page
+###### Login & Registration Page
 
-![Screenshot of Landing Page]()
-
-
-###### User Dashboard
-
-![Screenshot of User Dashboard]()
+![Screenshot of Landing Page](https://i.postimg.cc/26S88cGJ/Screen-Shot-2018-10-19-at-8-29-29-AM.png)
 
 
 ###### Gameplay
 
-![Screenshot of Gameplay]()
-
-
-###### Instant Feedback
-
-![Screenshot of Gameplay feedback with correct answer]()
-
-![Screenshot of Gameplay feedback with wrong answer]()
-
-
-###### Mobile Views
-
-![Screenshot of Mobile Landing Page]()  ![Screenshot of Mobile Gameplay]()
-
-
-
-
-
+![Screenshot of Gameplay](https://i.postimg.cc/B67Z8Twv/Screen-Shot-2018-10-19-at-8-30-08-AM.png)
