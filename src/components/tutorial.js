@@ -14,11 +14,26 @@ export default class Tutorial extends React.Component {
         <p className="tutorial-text">A few other tidbits...</p>
         <br/>
         <ul>
-          <li className="tutorial-text">When you get a question correct, your proficiency for than question will increase.</li>
-          <li className="tutorial-text">When you get a question incorrect, your proficiency for that question will decrease.</li>
-          <li className="tutorial-text">The frequency of receiving certain questions is dependent on your proficiency.</li>
-          <li className="tutorial-text">If you have a higher proficiency in a question, you will see it less frequently.</li>
-          <li className="tutorial-text">If you have a lower proficiency in a question, you will see it more frequently.</li>
+          <li className="tutorial-text">
+            <i class="fas fa-globe-americas"></i>
+            <span className='tidbit'>When you get a question correct, your proficiency for than question will increase.</span>
+          </li>
+          <li className="tutorial-text">
+            <i class="fas fa-globe-americas"></i>
+            <span className='tidbit'>When you get a question incorrect, your proficiency for that question will decrease.</span>
+          </li>
+          <li className="tutorial-text">
+            <i class="fas fa-globe-americas"></i>
+            <span className='tidbit'>The frequency of receiving certain questions is dependent on your proficiency.</span>
+          </li>
+          <li className="tutorial-text">
+            <i class="fas fa-globe-americas"></i>
+            <span className='tidbit'>If you have a higher proficiency in a question, you will see it less frequently.</span>
+          </li>
+          <li className="tutorial-text">
+            <i class="fas fa-globe-americas"></i>
+            <span className='tidbit'>If you have a lower proficiency in a question, you will see it more frequently.</span>
+          </li>
         </ul>
         <br/>
         <p className="tutorial-text">In time, our unique algorithm will be jiving well with your brain functions to teach you all the geography you will want to know!</p>
