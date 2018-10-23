@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
 import {login} from '../actions/auth';
@@ -47,7 +46,6 @@ export class LoginForm extends React.Component {
                     Log in
                 </button>
 
-                <Link className='link-to' to="/register">Register -></Link>
             </form>
         );
     }
