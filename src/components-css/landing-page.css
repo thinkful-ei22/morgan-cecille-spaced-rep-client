@@ -59,6 +59,16 @@
   max-width: 300px;
 }
 
+.demo-account {
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.demo-account-container {
+  padding-top: 20px;
+}
+
 
 @media only screen and (max-width: 600px){
   .side-photo {

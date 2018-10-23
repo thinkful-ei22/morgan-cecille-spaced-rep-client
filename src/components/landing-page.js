@@ -16,6 +16,8 @@ export function LandingPage(props) {
       )
     }
 
+
+
     return (
         <div className="home">
             <div className='trans-box'>
