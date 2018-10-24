@@ -1,7 +1,6 @@
 .tutorial-container {
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
+  font-size: 20px;
+  margin: 5% 10%;
   color: #E85A4F;
 }
 
@@ -9,11 +8,18 @@
   font-family: 'Abel', sans-serif;
 }
 
-ul {
+ul.tutorial-text {
   font-family: 'Abel', sans-serif;
 }
 
-li {
+
+li.tutorial-text {
+  list-style: none;
+  font-family: 'Abel', sans-serif;
+  margin: 0 0 20px -3px;
+}
+.tutorial-text span {
+  margin-left: 5px;
   font-family: 'Abel', sans-serif;
 }
 

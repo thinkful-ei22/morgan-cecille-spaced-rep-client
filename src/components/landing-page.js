@@ -16,19 +16,26 @@ export function LandingPage(props) {
       )
     }
 
+
+
     return (
         <div className="home">
+            <div className='trans-box'>
 
-            <div className="side-photo">
-              <div className='side-photo-cover'></div>
-            </div>
+                <div className="side-photo">
+                  <div className='side-photo-cover'></div>
+                </div>
 
-            <h1 className="logo-landing">Atlas</h1>
-            <div className="description-container">
-              <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.</p>
+                <div className='login-container'>
+                  <h1 className="logo-landing">Atlas</h1>
+                  <div className="description-container">
+                    <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.</p>
+                  </div>
+                  <LoginForm />
+                  <Link className="option" to="/register">Register -></Link>
+                </div>
+            
             </div>
-            <LoginForm />
-            <Link className="option" to="/register">Register -></Link>
         </div>
     );
 }

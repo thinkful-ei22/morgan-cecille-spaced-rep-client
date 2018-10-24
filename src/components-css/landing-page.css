@@ -1,107 +1,111 @@
 .home {
-  height: 100%;
-  width: 100%;
+  text-align: left;
 }
 
 .side-photo {
-  position: fixed;
-  height: 105%;
+  display: inline-block;
+  height: 100vh;
   width: 50%;
   background-image: url("https://s15.postimg.cc/rm98sqk23/Bryce2.jpg");
   background-size: cover;
-  margin-top: -76px;
-  margin-left: -20px;
 }
+
+.login-container {
+  font-size: 20px;
+  color: #E85A4F;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  padding-top: 100px;
+  vertical-align: top;
+}
+
+
 
 .logo-landing {
   font-family: 'Abel', sans-serif;
   color: #E85A4F;
   font-size: 45px;
-  text-align: right;
-  margin-top: 5%;
-  margin-right: 20%;
 }
 
-.description-container {
-  position: fixed;
-  height: 50%;
-  width: 50%;
-  right: 0px;
 
-}
-
-.description, .tagline {
+.description {
   font-family: 'Abel', sans-serif;
   color: #E85A4F;
-  position: relative;
   margin-top: 10%;
   margin-right: 20%;
   margin-left: 20%;
+  font-size: 24px;
 }
 
 .option {
+  position: relative;
+  top: 30px;
   font-family: 'Abel', sans-serif;
-  font-size: 20px;
+  color: #E85A4F;
 }
 
 .loading-screen {
   text-align: center;
 }
+
 .loading-screen p {
   font-family: 'Abel', sans-serif;
   font-size: 24px;
   margin: 0 0 20px 15px;
 }
+
 .loading-screen img {
   width: 100%;
   max-width: 300px;
 }
 
-.link-to {
-  display: none;
+.demo-account {
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
-@media only screen and (max-width: 620px){
-  .side-photo-cover {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 100%;
-    height: 100%;
+.demo-account-container {
+  padding-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px){
+  .side-photo {
+    display: none;
   }
 
-  .side-photo {
+  .home {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://s15.postimg.cc/rm98sqk23/Bryce2.jpg");
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .trans-box {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .login-container {
     width: 100%;
-    height: 110%;
   }
 
   .logo-landing {
     border-radius: 40px;
-    position: relative;
-    text-align: center;
     margin: 0 auto;
     width: 160px;
     background: radial-gradient(rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0) 85%);
-  }
-
-  .description-container {
-    width: 100%;
   }
 
   .description {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
     border-radius: 20px;
+    margin: 10% 10% 0 10%;
   }
 
-  a.link-to {
-    position: initial;
-    bottom: initial;
-    right: initial;
-    display: block;
-    margin-top: 15px;
-    font-size: 15px;
-    font-family: 'Abel', sans-serif;
-  }
-  .option {
-    display: none;
-  }
 }
