@@ -1,7 +1,6 @@
 import React from 'react';
 import { getQuestions, displayTutorial } from '../actions/game';
 import { connect } from 'react-redux';
-
 import Gameplay from './gameplay';
 import Tutorial from './tutorial';
 import SummaryProgress from './summary-progress';
@@ -13,6 +12,8 @@ export class Dashboard extends React.Component {
       if(this.props.playButton === false && this.props.tutorialButton === false) {
         return (
             <div className="dashboard">
+
+              <section className="play-tutorial-options">
                 <div className="dashboard-username">
                     Welcome {this.props.username}!
                 </div>
@@ -23,7 +24,10 @@ export class Dashboard extends React.Component {
                   <button className="play-button" type="button" onClick={() => this.props.dispatch(getQuestions())}>Play</button>
                   <button className="tutorial-button" type="button" onClick={() => this.props.dispatch(displayTutorial(true))}>How to Play</button>
                 </div>
-                <SummaryProgress questionLevels={this.props.questionLevels} dispatch={this.props.dispatch}/>
+              </section>
+
+              <SummaryProgress questionLevels={this.props.questionLevels} dispatch={this.props.dispatch}/>
+
             </div>
         );
       } else if(this.props.tutorialButton === true) {

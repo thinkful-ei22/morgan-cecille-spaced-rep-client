@@ -1,8 +1,8 @@
 import React from 'react';
-import {Field, reduxForm, focus} from 'redux-form';
+import { Field, reduxForm, focus } from 'redux-form';
 import Input from './input';
-import {login} from '../actions/auth';
-import {required, nonEmpty} from '../validators';
+import { login } from '../actions/auth';
+import { required, nonEmpty} from '../validators';
 import '../components-css/login-form.css';
 
 export class LoginForm extends React.Component {
@@ -53,6 +53,7 @@ export class LoginForm extends React.Component {
                 <button className="login-button" disabled={this.props.pristine || this.props.submitting} type='submit'>
                     Log in
                 </button>
+                
                 <div className='demo-account-container'>
                     <a className='demo-account' onClick={() => this.demoLogin()}>Login to Demo Account</a>
                 </div>

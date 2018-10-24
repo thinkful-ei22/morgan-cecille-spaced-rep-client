@@ -1,11 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
-import '../components-css/landing-page.css';
+import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
 import LoginForm from './login-form';
+import '../components-css/landing-page.css';
 
 export function LandingPage(props) {
-    // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
     } else if (props.loading) {
@@ -20,7 +19,7 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <div className='trans-box'>
+            <section className='trans-box'>
 
                 <div className="side-photo">
                   <div className='side-photo-cover'></div>
@@ -34,8 +33,8 @@ export function LandingPage(props) {
                   <LoginForm />
                   <Link className="option" to="/register">Register -></Link>
                 </div>
-            
-            </div>
+
+            </section>
         </div>
     );
 }
