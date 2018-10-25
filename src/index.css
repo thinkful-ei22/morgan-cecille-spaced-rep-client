@@ -5,7 +5,14 @@ body * {
 }
 
 body {
-  padding: 20px;
   box-sizing: border-box;
   margin: 0;
+}
+
+body a:hover, body button {
+  cursor: pointer;
+}
+
+.form-error {
+  font-size: 16px;
 }

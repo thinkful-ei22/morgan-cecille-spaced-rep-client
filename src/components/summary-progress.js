@@ -34,9 +34,13 @@ export default class SummaryProgress extends React.Component {
           <br/>
           <h3 className="average">Average Proficiency Level: {averageLevel.toFixed(1)}/5</h3>
           <br/>
+
+          <section className="stats-display">
           <ul className="stats">
             {progressList}
           </ul>
+          </section>
+          
           <br/>
           <br/>
       </div>

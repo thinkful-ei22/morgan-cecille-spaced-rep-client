@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Field, reduxForm, focus} from 'redux-form';
-import {registerUser} from '../actions/users';
-import {login} from '../actions/auth';
+import { Field, reduxForm, focus } from 'redux-form';
+import { registerUser } from '../actions/users';
+import { login } from '../actions/auth';
 import Input from './input';
-import '../components-css/registration-form.css'
-import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import { required, nonEmpty, matches, length, isTrimmed } from '../validators';
+import '../components-css/registration-form.css';
+
 const passwordLength = length({min: 8, max: 72});
 const matchesPassword = matches('password');
 
@@ -22,48 +23,53 @@ export class RegistrationForm extends React.Component {
         return (
           <div>
 
-            <div className="side-photo-registration-form">
+            <section className="side-photo">
               <div className='side-photo-cover'></div>
-            </div>
+            </section>
 
-            <h1 className="logo-register">Atlas</h1>
-            <div className="description-container">
-              <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.</p>
-            </div>
-            <form
-                className="login-form"
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
-                )}>
-                <label className="label" htmlFor="username">Username</label>
-                <Field
-                    component={Input}
-                    type="text"
-                    name="username"
-                    validate={[required, nonEmpty, isTrimmed]}
-                />
-                <label className="label" htmlFor="password">Password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="password"
-                    validate={[required, passwordLength, isTrimmed]}
-                />
-                <label className="label" htmlFor="passwordConfirm">Confirm password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="passwordConfirm"
-                    validate={[required, nonEmpty, matchesPassword]}
-                />
-                <button
-                    className="register-button"
-                    type="submit"
-                    disabled={this.props.pristine || this.props.submitting}>
-                    Register
-                </button>
-              <Link className='link-to' to="/">Login -></Link>
-            </form>
+            <section className='register-container'>
+              <h1 className="logo-register">Atlas</h1>
+              <div className="description-container">
+                <p className="description">Atlas is a learning app that builds your geography skills through a spaced repetition algorithm designed to boost memory retention.</p>
+              </div>
+
+              <form
+                  className="login-form"
+                  onSubmit={this.props.handleSubmit(values =>
+                      this.onSubmit(values)
+                  )}>
+                  <label className="label" htmlFor="username">Username</label>
+                  <Field
+                      component={Input}
+                      type="text"
+                      name="username"
+                      validate={[required, nonEmpty, isTrimmed]}
+                  />
+                  <label className="label" htmlFor="password">Password</label>
+                  <Field
+                      component={Input}
+                      type="password"
+                      name="password"
+                      validate={[required, passwordLength, isTrimmed]}
+                  />
+                  <label className="label" htmlFor="passwordConfirm">Confirm password</label>
+                  <Field
+                      component={Input}
+                      type="password"
+                      name="passwordConfirm"
+                      validate={[required, nonEmpty, matchesPassword]}
+                  />
+                  <button
+                      className="register-button"
+                      type="submit"
+                      disabled={this.props.pristine || this.props.submitting}>
+                      Register
+                  </button>
+              </form>
+
+              <Link className="option" to="/">Login -></Link>
+              
+            </section>
 
           </div>
         );
