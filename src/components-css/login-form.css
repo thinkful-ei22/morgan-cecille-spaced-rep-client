@@ -46,7 +46,7 @@
     border-radius: 20px;
   }
 
-  .option {
-    top: -50px;
+  a.option {
+    top: -65px;
   }
 }

@@ -17,23 +17,23 @@ export default class Tutorial extends React.Component {
           <br/>
           <ul>
             <li className="tutorial-text">
-              <i class="fas fa-globe-americas"></i>
+              <i className="fas fa-globe-americas"></i>
               <span className='tidbit'>When you get a question correct, your proficiency for than question will increase.</span>
             </li>
             <li className="tutorial-text">
-              <i class="fas fa-globe-americas"></i>
+              <i className="fas fa-globe-americas"></i>
               <span className='tidbit'>When you get a question incorrect, your proficiency for that question will decrease.</span>
             </li>
             <li className="tutorial-text">
-              <i class="fas fa-globe-americas"></i>
+              <i className="fas fa-globe-americas"></i>
               <span className='tidbit'>The frequency of receiving certain questions is dependent on your proficiency.</span>
             </li>
             <li className="tutorial-text">
-              <i class="fas fa-globe-americas"></i>
+              <i className="fas fa-globe-americas"></i>
               <span className='tidbit'>If you have a higher proficiency in a question, you will see it less frequently.</span>
             </li>
             <li className="tutorial-text">
-              <i class="fas fa-globe-americas"></i>
+              <i className="fas fa-globe-americas"></i>
               <span className='tidbit'>If you have a lower proficiency in a question, you will see it more frequently.</span>
             </li>
           </ul>
