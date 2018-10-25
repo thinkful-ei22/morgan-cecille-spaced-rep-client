@@ -17,6 +17,7 @@
   border: 2px solid black;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
+  max-width: 700px;
 }
 
 .confirm-reset p {
